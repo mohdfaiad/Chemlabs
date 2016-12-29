@@ -1,0 +1,173 @@
+﻿<div>
+   
+    <div class="container">
+        
+        <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Company Name"
+                       ng-model="vm.quote.description" value="{{vm.quote.description}}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Company Address"
+                       ng-model="vm.quote.productName" value="{{vm.quote.productName}}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Kint Attn." ng-model="vm.quote.productCode" value="{{vm.quote.productCode}}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="VAT"
+                       value="{{5.5}}">
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class="form-group" action="#" method="get">
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Cat. No." value="" ng-model="catNo" name="catNo">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Unit" value="" ng-model="unit" name="unit">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Description" value="" ng-model="description" name="description">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Make" value="" ng-model="make" name="make">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Unit Price Rs." value="" ng-model="unitPrice" name="unitPrice">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Quantity" value="" ng-model="quantity" name="quantity">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Ext Price Rs." value="" ng-model="extPrice" name="extPrice">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Vat" value="" ng-model="vatRate" name="vatRate">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="VAT Value" value="" ng-model="vat" name="vat">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Total Value Rs." value="" ng-model="totalValue" name="totalValue">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Lead time" value="" ng-model="leadTime" name="leadTime">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="button" class="btn btn-success btn-block" value="Add item" ng-click="addRow();">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-10 col-sm-10" style="margin-top: 10px;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <strong>List of quotation items</strong>
+                </div>
+
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Cat.No.</th>
+                                <th>Unit</th>
+                                <th>Description</th>
+                                <th>Make</th>
+                                <th>Unit Price</th>
+                                <th>Qty</th>
+                                <th>Ext Price</th>
+                                <th>VAT Value</th>
+                                <th>Total Value</th>
+                                <th>Lead Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in vm.quoteDetails">
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.catNo }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.catNo" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.unit }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.unit" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.description }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.description" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.make }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.make" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.unitPrice }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.unitPrice" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.quantity }}</span>
+                                    <input type="text" size="5" ng-show="!product.showEdit" ng-model="product.quantity" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.extPrice }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.extPrice" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.vat }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.vat" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.totalValue }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.totalValue" class="form-control">
+                                </td>
+                                <td>
+                                    <span ng-show="product.showEdit">{{ product.leadTime }}</span>
+                                    <input type="text" ng-show="!product.showEdit" ng-model="product.leadTime" class="form-control">
+                                </td>
+                                <td>
+                                    <!--<button class="btn btn-primary btn-xs glyphicon glyphicon-pencil" ng-click="editProduct(product.productCode)">Edit</button>-->
+                                    <span ng-show="product.showEdit" ng-click="toggleEdit(product)" class="glyphicon glyphicon-pencil"></span>
+                                    <span ng-show="!product.showEdit" ng-click="toggleEdit(product)" class="glyphicon glyphicon-ok"></span>
+                                    <span ng-show="product.showEdit" ng-click="removeRow(product.catNo)" class="glyphicon glyphicon-remove"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel-footer">
+                    <div style="width: 300px;">
+                        <button type="button" class="btn btn-success">
+                            Save quotation
+                        </button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Generate <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">PDF</a></li>
+                                <li><a href="#">Excel</a></li>
+                                <li><a href="#">Word</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div class="pull-right" style="width: 320px; margin-top: -37px;">
+                        <ul class="pagination">
+                            <li><a href="#"> <<< </a></li>
+                            <li><a class="active" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"> >>> </a></li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+
+        <!--</div>-->
+    </div>
+    <!-- Container -->    
+</div>   

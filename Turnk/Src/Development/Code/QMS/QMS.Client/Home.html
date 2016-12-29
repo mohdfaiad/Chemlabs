@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quotation Management System</title>
+    <!-- Style sheets -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/AppCss/main.min.css" rel="stylesheet" />
+    <style>
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > th {
+            padding: 2px;
+        }
+
+        body {
+            color: #333;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            line-height: 1.42857;
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body class="themed-body" ng-app="productManagement">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--<nav class="navbar navbar-default">-->
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a>Quotation Management System</a></li>
+                    <li class=""><a href="/Home.html#/contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right shifted">
+                    <li class=""><a href="/Home.html#/register">Register</a></li>
+                    <li class="active"><a href="/Home.html#/">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div>
+                <noscript>
+                    <div class="alert alert-warning">
+                        <b>Ohh!</b><p>
+                            This site requires javascript to function correctly. For instructions on how to
+                            enable javascript please see <a href="http://www.enable-javascript.com/" target="_blank">
+                                here
+                            </a>
+                        </p>
+                    </div>
+                </noscript>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+
+        <div id="menuBar" class="col-lg-2 col-md-2 col-sm-2">
+            <div class="row">
+                <div class="panel dropshadow" id="collapseMenu">
+                    <div class="panel-body panel-heading menu-header" data-toggle="collapse" data-parent="#collapseMenu" href="#menu">
+                        <div class="text-center">
+                            <span class="text-primary">Menu </span>
+                        </div>
+                    </div>
+                    <div id="menu" class="list-group panel-collapse collapse in">
+                        <a class="list-group-item active" href="..\Pharmaproject\Main.htm">
+                            <div>
+                                <strong>Dashboard</strong>
+                            </div>
+                            <div>
+                                <h6>
+                                    <strong>View the dashboard</strong>
+                                </h6>
+                            </div>
+                        </a>
+                        <a class="list-group-item" href="..\Pharmaproject\CreateQuote.htm">
+                            <div>
+                                <strong>Create Quotations</strong>
+                            </div>
+                            <div>
+                                <h6>
+                                    <strong>Create your new qutation</strong>
+                                </h6>
+                            </div>
+                        </a><a class="list-group-item" href="..\Pharmaproject\CreateOrder.htm">
+                            <div>
+                                <strong>Create Orders</strong>
+                            </div>
+                            <div>
+                                <h6>
+                                    <strong>Create your new order</strong>
+                                </h6>
+                            </div>
+                        </a>
+                        <a class="list-group-item" href="">
+                            <div>
+                                <strong>View Reports</strong>
+                            </div>
+                            <div>
+                                <h6>
+                                    <strong>View my reports</strong>
+                                </h6>
+                            </div>
+                        </a>
+                        <a class="list-group-item" href="#">
+                            <div>
+                                <strong>My Account</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10" ng-view></div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-center">&copy; <a href="#">QMS</a> 2016 - 2017</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!-- Application Script -->
+    <script src="Views/app.js"></script>
+
+    <!-- Services -->
+    <script src="Common/common.services.js"></script>
+    <script src="Common/productResource.js"></script>
+    <script src="Common/LoginService.js"></script>
+
+    <!-- Product Controllers -->
+    <script src="Views/Authentication/userCtrl.js"></script>
+    <script src="Views/Products/Dashboard/productListCtrl.js"></script>
+    <script src="Views/Products/Quotation/viewCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿ <!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Navbar collapse -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right shifted">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Welcome,
+                        anil.apkar <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="..\Pharmaproject\Main.htm">
+                                <div>
+                                    <strong>Dashboard</strong>
+                                </div>
+                                <div>
+                                    View the dashboard
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>Create Quotation</strong>
+                                </div>
+                                <div>
+                                    Create new quotations
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="..\Pharmaproject\CreateOrder.htm">
+                                <div>
+                                    <strong>Create new order</strong>
+                                </div>
+                                <div>
+                                    Create new order
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>My reports</strong>
+                                </div>
+                                <div>
+                                    Quotations & Orders
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li role="presentation" class="dropdown-header">Account Actions</li>
+                        <li><a href="#">My Account</a> </li>
+                        <li class=""><a href="#">Logout</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<!-- /.Fixed navbar -->
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Quotation List</strong>
+                </div>
+                <div class="col-md-5" style="margin-left:-48px;">
+                    <div class="input-group">
+                        <!--<form action="..\Pharmaproject\Main.htm">-->
+                        <input id="txtTypeahead" class="form-control input-sm" ng-model="mySearch">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-sm" type="submit" ng-click="DoSearch(mySearch)">
+                                Search
+                            </button>
+                        </span>
+                        <!--</form>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>QTN No.</th>
+                        <th>Company Name</th>
+                        <th>Total value</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in vm.products" ng-class="{success : product.status == 'Completed', warning : product.status == 'Track Quotation',active : product.status == 'In-Progress' }">
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.productName}}</td>
+                        <td>{{ product.price | currency }}</td>
+                        <td>{{ product.status }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-xs" ng-click="editProduct(product.productCode)">Edit</button>
+                            <button class="btn btn-primary btn-xs" ng-click="viewProduct(product.productCode)">View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
