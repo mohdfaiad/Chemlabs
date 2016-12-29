@@ -3,10 +3,13 @@
     angular
         .module("productManagement")
         .controller("productListCtrl",
-                     ["productResource", "$scope", '$location', productListCtrl]);
+                     ["productResource", "$scope", "$location","global", productListCtrl]);
 
-    function productListCtrl(productResource, $scope, $location) {        
-        var vm = this;        
+    function productListCtrl(productResource, $scope, $location, global) {
+        global.appInit();
+        global.appMenuActive('mdashboard');
+
+        var vm = this;
         productResource.query(function (data) {
             vm.products = data;
         });
@@ -23,6 +26,7 @@
             //$location.href('#/view/' + 1234);
             $location.path('/view');            
         }
+
         $scope.editProduct = function (productCode) {
             vm.viewCode = productCode;            
             $location.path('/edit');

@@ -3,9 +3,12 @@
     angular
         .module("productManagement")
         .controller("viewCtrl",
-                     ["productResource", "$scope", "$routeParams", viewCtrl]);
+                     ["productResource", "$scope", "$routeParams", "global", viewCtrl]);
 
-    function viewCtrl(productResource, $scope, $routeParams) {
+    function viewCtrl(productResource, $scope, $routeParams, global) {
+        global.appInit();
+        global.appMenuActive('mview');
+
         var vm = this;        
         vm.quoteid = "QTN/Orbit/001/10-11-16";        
         productResource.query({ search: '', quoteid: vm.quoteid }, function (response) {

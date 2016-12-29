@@ -58,8 +58,7 @@
             </div>
         </div>
 
-        <div id="menuBar" class="col-lg-2 col-md-2 col-sm-2">
-            <div class="row">
+        <div id="menuBar" class="col-lg-2 col-md-2 col-sm-2" style="display:none;">            
                 <div class="panel dropshadow" id="collapseMenu">
                     <div class="panel-body panel-heading menu-header" data-toggle="collapse" data-parent="#collapseMenu" href="#menu">
                         <div class="text-center">
@@ -67,17 +66,17 @@
                         </div>
                     </div>
                     <div id="menu" class="list-group panel-collapse collapse in">
-                        <a class="list-group-item active" href="..\Pharmaproject\Main.htm">
+                        <a id="mdashboard" class="list-group-item" href="Home.html#/dashboard">
                             <div>
                                 <strong>Dashboard</strong>
                             </div>
                             <div>
                                 <h6>
-                                    <strong>View the dashboard</strong>
+                                    <strong>View your quotations</strong>
                                 </h6>
                             </div>
                         </a>
-                        <a class="list-group-item" href="..\Pharmaproject\CreateQuote.htm">
+                        <a id="mcreate" class="list-group-item" href="..\Pharmaproject\CreateQuote.htm">
                             <div>
                                 <strong>Create Quotations</strong>
                             </div>
@@ -86,34 +85,33 @@
                                     <strong>Create your new qutation</strong>
                                 </h6>
                             </div>
-                        </a><a class="list-group-item" href="..\Pharmaproject\CreateOrder.htm">
+                        </a><a id="mview" class="list-group-item" href="Home.html#/view">
                             <div>
-                                <strong>Create Orders</strong>
+                                <strong>View/Edit Quotation</strong>
                             </div>
                             <div>
                                 <h6>
-                                    <strong>Create your new order</strong>
+                                    <strong>View or modify quotation items</strong>
                                 </h6>
                             </div>
                         </a>
-                        <a class="list-group-item" href="">
+                        <a id="mreports" class="list-group-item" href="">
                             <div>
-                                <strong>View Reports</strong>
+                                <strong>My Reports</strong>
                             </div>
                             <div>
                                 <h6>
-                                    <strong>View my reports</strong>
+                                    <strong>View reports</strong>
                                 </h6>
                             </div>
                         </a>
-                        <a class="list-group-item" href="#">
+                        <a id="maccount" class="list-group-item" href="#">
                             <div>
                                 <strong>My Account</strong>
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
+                </div>            
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10" ng-view></div>
     </div>

@@ -49,4 +49,17 @@
 
         .otherwise({ redirectTo: '/login' });                       
     });
+
+    app.factory('global', function () {
+        return {
+            appInit: function () {
+                document.getElementById('menuBar').style = 'display:block;';
+                $("#menu .list-group-item").removeClass("active");                
+            },
+            appMenuActive: function (menu) {                
+                $('#'+menu).addClass("active");
+            }        
+        };
+    });
+
 }());
