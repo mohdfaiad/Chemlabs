@@ -61,7 +61,10 @@
                         case "menuActive":
                             $("#menu .list-group-item").removeClass("active");
                             $('#m' + obj[key]).addClass("active");
-                            break;                        
+                            break;
+                        default:
+                            document.getElementById('menuBar').style = 'display:none;'
+                            break;
                     }
                 }
             }
