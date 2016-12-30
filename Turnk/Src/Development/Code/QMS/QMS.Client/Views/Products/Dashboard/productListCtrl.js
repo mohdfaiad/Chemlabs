@@ -10,7 +10,7 @@
         //Enable view essentials on view load.
         var setPreferences = {
             menuBar: 'true',
-            menuActive: 'dashboard',
+            menuActive: 'dashboard',            
             //viewPath:'/home.htm#/dashboard',
         };
         global.setViewPreferences(setPreferences);

@@ -45,7 +45,12 @@
              controller: 'viewCtrl',
              templateUrl: "/Views/Products/Quotation/editView.html",
              controllerAs: 'vm'
-        })        
+        })
+        .when("/create", {
+            controller: 'createCtrl',
+            templateUrl: "/Views/Products/Quotation/editView.html",
+            controllerAs: 'vm'
+        })
 
         .otherwise({ redirectTo: '/login' });                       
     });
@@ -57,6 +62,8 @@
                     switch (key) {
                         case "menuBar":                            
                             document.getElementById('menuBar').style = (obj[key] == 'true') ? 'display:block;' : 'display:none;'
+                            document.getElementById('topMenu').style = 'display:block;'
+                            document.getElementById('loginMenu').style = 'display:none;'
                             break;
                         case "menuActive":
                             $("#menu .list-group-item").removeClass("active");
@@ -75,6 +82,7 @@
     app.controller('homeCtrl', function ($scope) {
         $scope.dashboardPath = "/Home.html#/dashboard";
         $scope.editViewPath = "/Home.html#/view";
+        $scope.createViewPath = "/Home.html#/create";
         $scope.loginPath = "/Home.html#/";
         $scope.contactPath = "/Home.html#/contact";
         $scope.registerPath = "/Home.html#/register";
