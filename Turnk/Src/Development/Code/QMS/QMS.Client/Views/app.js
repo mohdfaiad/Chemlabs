@@ -51,6 +51,22 @@
             templateUrl: "/Views/Products/Quotation/editView.html",
             controllerAs: 'vm'
         })
+        .when("/account", {
+            controller: 'adminCtrl',
+            templateUrl: "/Views/Administration/accountView.html",
+            controllerAs: 'vm'
+        })
+        .when("/password", {
+            controller: 'adminCtrl',
+            templateUrl: "/Views/Administration/changepwdView.html",
+            controllerAs: 'vm'
+        })
+        .when("/changeemail", {
+            controller: 'changeemail',
+            templateUrl: "/Views/Administration/changeEmailView.html",
+            controllerAs: 'vm'
+        })
+
 
         .otherwise({ redirectTo: '/login' });                       
     });
@@ -86,6 +102,7 @@
         $scope.loginPath = "/Home.html#/";
         $scope.contactPath = "/Home.html#/contact";
         $scope.registerPath = "/Home.html#/register";
+        $scope.accountPath = "/Home.html#/account";
     });
 
 }());

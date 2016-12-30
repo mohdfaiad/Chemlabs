@@ -76,7 +76,7 @@
                             </li>
                             <li class="divider"></li>
                             <li role="presentation" class="dropdown-header">Account Actions</li>
-                            <li><a href="#">My Account</a> </li>
+                            <li><a href="{{accountPath}}">My Account</a> </li>
                             <li class=""><a href="{{loginPath}}">Logout</a> </li>
                         </ul>
                     </li>
@@ -148,16 +148,7 @@
                                     <strong>Create your new qutation</strong>
                                 </h6>
                             </div>
-                        </a><!--<a id="mview" class="list-group-item" href="{{editViewPath}}">
-                            <div>
-                                <strong>Create order</strong>
-                            </div>
-                            <div>
-                                <h6>
-                                    <strong>Create new order</strong>
-                                </h6>
-                            </div>
-                        </a>-->
+                        </a>
                         <a id="mreports" class="list-group-item" href="">
                             <div>
                                 <strong>My Reports</strong>
@@ -168,7 +159,7 @@
                                 </h6>
                             </div>
                         </a>
-                        <a id="maccount" class="list-group-item" href="#">
+                        <a id="maccount" class="list-group-item" href="{{accountPath}}">
                             <div>
                                 <strong>My Account</strong>
                             </div>
@@ -209,5 +200,6 @@
     <script src="Views/Authentication/userCtrl.js"></script>
     <script src="Views/Products/Dashboard/productListCtrl.js"></script>
     <script src="Views/Products/Quotation/viewCtrl.js"></script>
+    <script src="Views/Administration/adminCtrl.js"></script>
 </body>
 </html>
