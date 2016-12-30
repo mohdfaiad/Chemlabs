@@ -23,24 +23,24 @@
         }
     </style>
 </head>
-<body class="themed-body" ng-app="productManagement">
+<body class="themed-body" ng-app="productManagement" ng-controller="homeCtrl" >
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!--<nav class="navbar navbar-default">-->
         <div class="container-fluid">
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class=""><a>Quotation Management System</a></li>
-                    <li class=""><a href="/Home.html#/contact">Contact</a></li>
+                    <li class=""><a href="{{contactPath}}">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right shifted">
-                    <li class=""><a href="/Home.html#/register">Register</a></li>
-                    <li class="active"><a href="/Home.html#/">Log In</a></li>
+                    <li class=""><a href="{{registerPath}}">Register</a></li>
+                    <li class="active"><a href="{{loginPath}}">Log In</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div>
                 <noscript>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div id="menu" class="list-group panel-collapse collapse in">
-                        <a id="mdashboard" class="list-group-item" href="Home.html#/dashboard">
+                        <a id="mdashboard" class="list-group-item" href="{{dashboardPath}}">
                             <div>
                                 <strong>Dashboard</strong>
                             </div>
@@ -85,16 +85,16 @@
                                     <strong>Create your new qutation</strong>
                                 </h6>
                             </div>
-                        </a><a id="mview" class="list-group-item" href="Home.html#/view">
+                        </a><!--<a id="mview" class="list-group-item" href="{{editViewPath}}">
                             <div>
-                                <strong>View/Edit Quotation</strong>
+                                <strong>Create order</strong>
                             </div>
                             <div>
                                 <h6>
-                                    <strong>View or modify quotation items</strong>
+                                    <strong>Create new order</strong>
                                 </h6>
                             </div>
-                        </a>
+                        </a>-->
                         <a id="mreports" class="list-group-item" href="">
                             <div>
                                 <strong>My Reports</strong>

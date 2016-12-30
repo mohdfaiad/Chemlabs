@@ -3,15 +3,15 @@
     angular
         .module("productManagement")
         .controller("userCtrl",
-                     ["userAccount", '$location', userCtrl])
+                     ["userAccount", '$location', "global", userCtrl])
         .controller("registerCtrl",
                      ["userAccount", '$location', registerCtrl])
         .controller("forgotCtrl",
                      ["userAccount", '$location', forgotCtrl])
-    .controller("contactCtrl",
+        .controller("contactCtrl",
                      ["userAccount", '$location', contactCtrl])
 
-    function userCtrl(userAccount,$location) {
+    function userCtrl(userAccount, $location, global) {
         var vm = this;
         vm.isLoggedIn = false;
         vm.message = '';
@@ -22,12 +22,19 @@
             confirmPassword:''
         };
 
+        //Enable view essentials on view load.
+        var setPreferences = {
+            menuBar: 'false',
+            //menuActive: 'dashboard',            
+        };
+        global.setViewPreferences(setPreferences);
+
         // user authentication. On success redirect to dashboard view.
         vm.login = function () {
             vm.userData.grant_type = "password";
             //vm.userData.userName = vm.userData.userName;
             vm.isLoggedIn = true;
-            console.log($location)
+            
             $location.path('/dashboard');
         }
 

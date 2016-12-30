@@ -6,8 +6,14 @@
                      ["productResource", "$scope", "$location","global", productListCtrl]);
 
     function productListCtrl(productResource, $scope, $location, global) {
-        global.appInit();
-        global.appMenuActive('mdashboard');
+
+        //Enable view essentials on view load.
+        var setPreferences = {
+            menuBar: 'true',
+            menuActive: 'dashboard',
+            //viewPath:'/home.htm#/dashboard',
+        };
+        global.setViewPreferences(setPreferences);
 
         var vm = this;
         productResource.query(function (data) {

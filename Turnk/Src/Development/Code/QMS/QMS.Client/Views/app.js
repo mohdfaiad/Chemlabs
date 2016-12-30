@@ -51,15 +51,30 @@
     });
 
     app.factory('global', function () {
-        return {
-            appInit: function () {
-                document.getElementById('menuBar').style = 'display:block;';
-                $("#menu .list-group-item").removeClass("active");                
-            },
-            appMenuActive: function (menu) {                
-                $('#'+menu).addClass("active");
-            }        
+        return {           
+            setViewPreferences: function (obj) {
+                for (var key in obj) {                    
+                    switch (key) {
+                        case "menuBar":                            
+                            document.getElementById('menuBar').style = (obj[key] == 'true') ? 'display:block;' : 'display:none;'
+                            break;
+                        case "menuActive":
+                            $("#menu .list-group-item").removeClass("active");
+                            $('#m' + obj[key]).addClass("active");
+                            break;                        
+                    }
+                }
+            }
         };
+    });
+
+    // Home controller
+    app.controller('homeCtrl', function ($scope) {
+        $scope.dashboardPath = "/Home.html#/dashboard";
+        $scope.editViewPath = "/Home.html#/view";
+        $scope.loginPath = "/Home.html#/";
+        $scope.contactPath = "/Home.html#/contact";
+        $scope.registerPath = "/Home.html#/register";
     });
 
 }());
