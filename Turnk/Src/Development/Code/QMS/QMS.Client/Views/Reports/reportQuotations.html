@@ -1,0 +1,36 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class="form-group" action="#" method="get">
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Company Name" value="" ng-model="companyName" name="companyName">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="text" class="form-control" placeholder="Total Value Rs." value="" ng-model="totalValue" name="totalValue">
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">                    
+                    <select class="form-control" id="status">
+                        <option>Show all</option>
+                        <option>Completed</option>
+                        <option>In-progress</option>
+                        <option>Rejected</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <!--<input type="text" class="form-control" placeholder="Select duration" value="" ng-model="duration" name="duration">-->
+                    <select class="form-control" id="Duration">
+                        <option>Show all</option>
+                        <option>1 month</option>
+                        <option>3 months</option>
+                        <option>6 months</option>
+                        <option>1 year</option>
+                    </select>
+                </div>
+                <div class="col-xs-4" style="padding: 2px 14px">
+                    <input type="button" class="btn btn-success btn-block" value="Get quotations" ng-click="addRow();">
+                </div>
+            </div>
+        </div>
+    </div>
+

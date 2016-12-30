@@ -5,7 +5,7 @@
     <title>Quotation Management System</title>
     <!-- Style sheets -->
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/AppCss/main.min.css" rel="stylesheet" />
+    <link href="Content/AppCss/main.min.css" rel="stylesheet" />    
     <style>
         .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > th {
             padding: 2px;
@@ -65,7 +65,7 @@
                             </li>                            
                             <li class="divider"></li>
                             <li>
-                                <a href="#">
+                                <a href="{{reportsPath}}">
                                     <div>
                                         <strong>My reports</strong>
                                     </div>
@@ -149,7 +149,7 @@
                                 </h6>
                             </div>
                         </a>
-                        <a id="mreports" class="list-group-item" href="">
+                        <a id="mreports" class="list-group-item" href="{{reportsPath}}">
                             <div>
                                 <strong>My Reports</strong>
                             </div>
@@ -185,9 +185,8 @@
     <script src="Scripts/angular-resource.min.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="Scripts/bootstrap.min.js"></script>    
+    
     <!-- Application Script -->
     <script src="Views/app.js"></script>
 
@@ -200,6 +199,7 @@
     <script src="Views/Authentication/userCtrl.js"></script>
     <script src="Views/Products/Dashboard/productListCtrl.js"></script>
     <script src="Views/Products/Quotation/viewCtrl.js"></script>
-    <script src="Views/Administration/adminCtrl.js"></script>
+    <script src="Views/Administration/adminCtrl.js"></script>    
+    <script src="Views/Reports/reportQuotationCtrl.js"></script>
 </body>
 </html>

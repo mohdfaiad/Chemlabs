@@ -66,9 +66,13 @@
             templateUrl: "/Views/Administration/changeEmailView.html",
             controllerAs: 'vm'
         })
+        .when("/reports", {
+            controller: 'rptQuotationCtrl',
+            templateUrl: "/Views/Reports/reportQuotations.html",
+            controllerAs: 'vm'
+        })
 
-
-        .otherwise({ redirectTo: '/login' });                       
+        .otherwise({ redirectTo: '/login' });
     });
 
     app.factory('global', function () {
@@ -78,13 +82,19 @@
                     switch (key) {
                         case "menuBar":                            
                             document.getElementById('menuBar').style = (obj[key] == 'true') ? 'display:block;' : 'display:none;'
-                            document.getElementById('topMenu').style = 'display:block;'
-                            document.getElementById('loginMenu').style = 'display:none;'
+                            if (obj[key] == 'true') {
+                                document.getElementById('topMenu').style = 'display:block;'
+                                document.getElementById('loginMenu').style = 'display:none;'
+                            }
+                            else {
+                                document.getElementById('topMenu').style = 'display:none;'
+                                document.getElementById('loginMenu').style = 'display:block;'
+                            }
                             break;
                         case "menuActive":
                             $("#menu .list-group-item").removeClass("active");
                             $('#m' + obj[key]).addClass("active");
-                            break;
+                            break;                        
                         default:
                             document.getElementById('menuBar').style = 'display:none;'
                             break;
@@ -103,6 +113,7 @@
         $scope.contactPath = "/Home.html#/contact";
         $scope.registerPath = "/Home.html#/register";
         $scope.accountPath = "/Home.html#/account";
+        $scope.reportsPath = "/Home.html#/reports";
     });
 
 }());
