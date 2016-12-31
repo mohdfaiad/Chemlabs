@@ -1,0 +1,5 @@
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\obj\Debug\QMS.DataAccessLayer.csprojResolveAssemblyReference.cache
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\QMS.DataAccessLayer.dll
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\QMS.DataAccessLayer.pdb
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\obj\Debug\QMS.DataAccessLayer.dll
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\obj\Debug\QMS.DataAccessLayer.pdb
