@@ -8,14 +8,14 @@
                      ["productResource", "$scope", "$routeParams", "global", createCtrl]);
 
     function viewCtrl(productResource, $scope, $routeParams, global) {
-
+                
         //Enable view essentials on view load.
         var setPreferences = {
             menuBar: 'true',
-            menuActive: 'view',
+            //menuActive: 'view',
             //viewPath:'/home.htm#/view',
         };
-        global.setViewPreferences(setPreferences);
+        global.setViewPreferences(setPreferences);        
 
         var vm = this;        
         vm.quoteid = "QTN/Orbit/001/10-11-16";        

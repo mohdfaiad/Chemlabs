@@ -6,7 +6,8 @@
                      ["productResource", "$scope", "$location","global", productListCtrl]);
 
     function productListCtrl(productResource, $scope, $location, global) {
-
+                
+        //alert(global.isValidUser);
         //Enable view essentials on view load.
         var setPreferences = {
             menuBar: 'true',

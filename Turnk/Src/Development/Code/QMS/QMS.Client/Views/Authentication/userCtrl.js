@@ -27,14 +27,14 @@
             menuBar: 'false',
             //menuActive: 'dashboard',            
         };
-        global.setViewPreferences(setPreferences);
+        global.setViewPreferences(setPreferences);        
 
         // user authentication. On success redirect to dashboard view.
         vm.login = function () {
             vm.userData.grant_type = "password";
             //vm.userData.userName = vm.userData.userName;
             vm.isLoggedIn = true;
-            
+            global.isValidUser = false;
             $location.path('/dashboard');
         }
 
@@ -76,7 +76,7 @@
     }
 
     function forgotCtrl(userAccount, $location) {
-        alert('forgotCtrl');
+        
     }
     function contactCtrl(userAccount, $location) {
         var vm = this;

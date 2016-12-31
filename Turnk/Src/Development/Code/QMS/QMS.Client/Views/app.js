@@ -100,7 +100,9 @@
                             break;
                     }
                 }
-            }
+            },
+
+            isValidUser: 'false'
         };
     });
 

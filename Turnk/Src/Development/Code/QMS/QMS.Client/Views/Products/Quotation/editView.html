@@ -15,9 +15,13 @@
                 <input type="text" class="form-control" placeholder="Kint Attn." ng-model="vm.quote.productCode" value="{{vm.quote.productCode}}">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="VAT"
-                       value="{{5.5}}">
-            </div>
+                <select class="form-control" id="tax">
+                    <option>Select tax</option>
+                    <option>VAT</option>
+                    <option>GST</option>
+                    <option>Both</option>                    
+                </select>
+            </div>            
         </div>
 
         <div class="col-lg-10 col-md-10 col-sm-10">
@@ -47,7 +51,7 @@
                     <input type="text" class="form-control" placeholder="Vat" value="" ng-model="vatRate" name="vatRate">
                 </div>
                 <div class="col-xs-4" style="padding: 2px 14px">
-                    <input type="text" class="form-control" placeholder="VAT Value" value="" ng-model="vat" name="vat">
+                    <input type="text" class="form-control" placeholder="Tax Value" value="" ng-model="vat" name="vat">
                 </div>
                 <div class="col-xs-4" style="padding: 2px 14px">
                     <input type="text" class="form-control" placeholder="Total Value Rs." value="" ng-model="totalValue" name="totalValue">
@@ -78,8 +82,8 @@
                                 <th>Unit Price</th>
                                 <th>Qty</th>
                                 <th>Ext Price</th>
-                                <th>VAT Value</th>
-                                <th>Total Value</th>
+                                <th>Tax in Rs.</th>
+                                <th>Total in Rs.</th>
                                 <th>Lead Time</th>
                             </tr>
                         </thead>
