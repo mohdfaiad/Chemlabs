@@ -26,5 +26,7 @@ namespace QMS.WebAPI.Models
         public string Unit { get; set; }
         public string UnitPrice { get; set; }
         public string Vat { get; set; }
+
+
     }
 }

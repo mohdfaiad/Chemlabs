@@ -3,3 +3,8 @@ F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataA
 F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\QMS.DataAccessLayer.pdb
 F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\obj\Debug\QMS.DataAccessLayer.dll
 F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\obj\Debug\QMS.DataAccessLayer.pdb
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\QMS.DataAccessLayer.dll.config
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\EntityFramework.dll
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\EntityFramework.xml
+F:\Anil Apkar\QMS Codebase\Chemlabs\Turnk\Src\Development\Code\QMS\QMS\QMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
